@@ -11,7 +11,7 @@
   */
 
   var disqus_config = function () {
-    this.page.url = 'http://localhost.com<%= request.original_fullpath %>';
+    this.page.url = '<%= request.base.url + request.original_fullpath %>';
     this.page.identifier = '<%= @post.id %>';
   };
 
