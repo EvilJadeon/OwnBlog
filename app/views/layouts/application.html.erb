@@ -11,6 +11,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'shared/nav' %>
+    <%= render 'shared/footer' %>
+
+    <div class="container main">
+      <%= flash_messages(:success) %>
+      <%= flash_messages(:danger) %>
+      <%= yield %>
+    </div>
+    
   </body>
 </html>
